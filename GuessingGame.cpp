@@ -12,7 +12,7 @@ int main()
   srand(time(NULL));
 
   // generate the first random number
-  numGen();
+  randNum = rand() % 10 + 1;
 
   while(run == 0)
   {
@@ -20,7 +20,7 @@ int main()
     cout << endl << "enter a number between 1 and 10" << endl;      
     cin >> input;
     guesses++;
-    cout << "Random Number: " << randNum << endl << "Your Number: " << input << endl;
+    cout << "You Guessed: " << input << endl;
 
     // compare results
     if(randNum < input) cout << "Too High!" << endl;
@@ -31,16 +31,11 @@ int main()
       cout << "You Win!" << endl << "Guesses: " << guesses << endl << "Play Again? (0=y 1=n)" << endl;
       cin >> yn;
       guesses = 0;
-      numGen();
+      randNum = rand() % 10 + 1;
       if(yn == 1)
       {
-	run = 1;
+	      run = 1;
       }
     }
-  }
-
-  void numGen()
-  {
-    randNum = rand() % 10 + 1;
   }
 }
