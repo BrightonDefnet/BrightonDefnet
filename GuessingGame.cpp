@@ -12,7 +12,7 @@ int main()
   srand(time(NULL));
 
   // generate the first random number
-  randNum = rand() % 10 + 1;
+  randNum = rand() % 100 + 1;
 
   while(run == 0)
   {
@@ -31,7 +31,7 @@ int main()
       cout << "You Win!" << endl << "Guesses: " << guesses << endl << "Play Again? (0=y 1=n)" << endl;
       cin >> yn;
       guesses = 0;
-      randNum = rand() % 10 + 1;
+      randNum = rand() % 100 + 1;
       if(yn == 1)
       {
 	      run = 1;
