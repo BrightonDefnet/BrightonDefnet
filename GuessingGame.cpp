@@ -17,7 +17,7 @@ int main()
   while(run == 0)
   {
     // receive inputs and create numbers
-    cout << endl << "enter a number between 1 and 10" << endl;      
+    cout << endl << "enter a number between 1 and 100" << endl;      
     cin >> input;
     guesses++;
     cout << "You Guessed: " << input << endl;
